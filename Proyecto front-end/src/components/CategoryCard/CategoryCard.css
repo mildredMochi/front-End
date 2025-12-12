@@ -1,0 +1,30 @@
+.category-card {
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: 250px;
+  max-width: 100%;
+}
+
+.category-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-image {
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+  overflow: hidden;
+}
+
+.category-image img {
+  width: auto;
+  height: 480px;
+  object-fit: contain;
+}

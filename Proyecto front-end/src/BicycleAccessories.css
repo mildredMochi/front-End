@@ -1,0 +1,489 @@
+
+/* VARIABLES DE TEMA PARA MODO OSCURO */
+.bike-page-wrapper.light {
+  --bike-bg-primary: #ffffff;
+  --bike-bg-secondary: #f5f5f5;
+  --bike-text-primary: #333333;
+  --bike-text-secondary: #666666;
+  --bike-border: #e0e0e0;
+}
+
+.bike-page-wrapper.dark {
+  --bike-bg-primary: #1a1a1a;
+  --bike-bg-secondary: #2d2d2d;
+  --bike-text-primary: #ffffff;
+  --bike-text-secondary: #cccccc;
+  --bike-border: #404040;
+}
+
+
+/* PÁGINA DE ACCESORIOS PARA BICICLETAS */
+.bike-page {
+  background: var(--bike-bg-secondary);
+  min-height: 100vh;
+  padding: 0;
+  margin-left: 0;
+}
+
+.bike-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==================== LAYOUT: SIDEBAR + CONTENIDO ==================== */
+.bike-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 0;
+  min-height: 100vh;
+}
+
+/* SIDEBAR IZQUIERDA - PUBLICIDAD FIJA */
+.bike-sidebar {
+  background: #1a1a1a;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 190px;
+  
+  display: flex;
+
+ 
+
+}
+
+.bike-sidebar img {
+  width: auto;/*horizontal*/
+  height: 500px;
+  object-fit: cover;
+}
+
+/* CONTENIDO PRINCIPAL DERECHA */
+.bike-main {
+  margin-left: -100px;
+  padding: 20px;
+}
+
+/* BANNER PRODUCTO DESTACADO (CANDADO) */
+.bike-top-banner {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.bike-top-image {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bike-top-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.bike-top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bike-top-badge {
+  display: inline-block;
+  background: #00D084;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.bike-top-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.bike-top-price {
+  font-size: 36px;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+}
+
+.bike-top-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* ==================== LAYOUT: SIDEBAR + PRODUCTOS ==================== */
+.bike-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* SIDEBAR CON IMAGEN/BANNER LATERAL */
+.bike-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.bike-side-banner {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  height: 600px;
+  position: relative;
+}
+
+.bike-side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ÁREA PRINCIPAL DE PRODUCTOS */
+.bike-main {
+  min-height: 100vh;
+}
+
+/* HEADER CON FILTROS */
+.bike-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: var(--bike-bg-primary);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin: 0 20px 20px 20px;
+}
+
+.bike-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+.bike-star {
+  color: #ffd700;
+  font-size: 18px;
+}
+
+.bike-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bike-select {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+}
+
+.bike-select:hover {
+  border-color: #00D084;
+}
+
+.bike-view-btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.bike-view-btn:hover {
+  border-color: #00D084;
+  color: #00D084;
+}
+
+/* GRID DE PRODUCTOS */
+.bike-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ==================== TARJETAS DE PRODUCTOS ==================== */
+.bike-card {
+  background: var(--bike-bg-primary);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid var(--bike-border);
+}
+
+.bike-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* BADGE AGOTADO */
+.bike-badge-sold {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #00D084;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 2;
+}
+
+.bike-checkmark {
+  font-size: 12px;
+}
+
+/* BOTÓN FAVORITO */
+.bike-favorite {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.bike-favorite:hover {
+  border-color: #ff4444;
+  transform: scale(1.1);
+}
+
+.bike-favorite.active {
+  background: #fff0f0;
+  border-color: #ff4444;
+}
+
+/* IMAGEN DEL PRODUCTO */
+.bike-image-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 15px 0;
+  overflow: hidden;
+}
+
+.bike-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.bike-card:hover .bike-image {
+  transform: scale(1.05);
+}
+
+.bike-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--bike-text-primary);
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  min-height: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bike-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--bike-text-primary);
+  margin: 0 0 15px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.bike-currency {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* ACCIONES */
+.bike-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.bike-quantity {
+  width: 60px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+}
+
+.bike-quantity:focus {
+  border-color: #00D084;
+}
+
+.bike-btn-buy {
+  flex: 1;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.bike-btn-buy:hover {
+  background: #00D084;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1200px) {
+  .bike-layout {
+    grid-template-columns: 240px 1fr;
+  }
+  
+  .bike-side-banner {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bike-top-banner {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .bike-top-image {
+    width: 100%;
+    height: 300x;
+  }
+  
+  .bike-top-content {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .bike-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .bike-sidebar {
+    position: relative;
+    top: 0;
+  }
+  
+  .bike-side-banner {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bike-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  
+  .bike-card {
+    padding: 15px;
+  }
+  
+  .bike-image-container {
+    height: 150px;
+  }
+  
+  .bike-name {
+    font-size: 13px;
+    min-height: 36px;
+  }
+  
+  .bike-price {
+    font-size: 20px;
+  }
+  
+  .bike-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .bike-controls {
+    justify-content: space-between;
+  }
+  
+  .bike-top-image {
+    height: 250px;
+    padding: 20px;
+  }
+  
+  .bike-top-content {
+    padding: 25px;
+  }
+  
+  .bike-top-title {
+    font-size: 18px;
+  }
+  
+  .bike-top-price {
+    font-size: 32px;
+  }
+}

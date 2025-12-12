@@ -1,0 +1,218 @@
+/* Fondo blanco para el header */
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* Contenedor del logo */
+.logo img {
+  height: 50px;        /* 👈 aumenta un poco la altura */
+  width: auto;    /* 👈 limita el ancho para que sea rectangular */
+  object-fit: contain; /* mantiene proporción */
+  display: block;
+}
+
+/* ICONO NEGRO TRADUCCION */
+.icon-btn svg,
+.menu-toggle svg {
+  color: #000;          /* 👈 íconos en negro */
+}
+
+/* Alineación interna */
+.header-top .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Buscador */
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-search input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Acciones del header */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lang-label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  background: #26e930;
+  overflow-x: auto;
+  width: 1000%;       
+  margin: 0;         
+  padding: 0;
+  transform: translateX(-20px);  
+}
+
+.nav button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav button:hover,
+.nav button.active {
+  background: rgba(255,255,255,0.1);
+  border-bottom-color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #00b574;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.open {
+    max-height: 500px;
+  }
+
+  .header-search {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #00b574;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.open {
+    max-height: 500px;
+  }
+
+  .header-search {
+    display: none;
+  }
+}
+
+/* Mostrar el botón hamburguesa en móvil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #00b574;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav.open {
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  .nav button {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 20px;
+  }
+
+  .header-search {
+    display: none;
+  }
+}
+
+

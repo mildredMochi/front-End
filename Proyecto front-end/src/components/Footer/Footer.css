@@ -1,0 +1,173 @@
+.footer-brand-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  width: 400px; /* Aumentado para que se vea más grande */
+  height: 400px;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.footer-description {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 100%; /* Asegura que no se corte por ancho */
+  text-align: center;
+  white-space: nowrap; /* 👈 Esto evita que se divida en varias líneas */
+  overflow: hidden;     /* 👈 Oculta el texto que se desborde */
+  text-overflow: ellipsis; /* 👈 Agrega "..." si el texto es demasiado largo */
+}
+
+/* Boletín ARRIBA en azul */
+.newsletter-top {
+  background: #dfe3e6;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.newsletter-top h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0066ff;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.newsletter-content {
+  display: flex;
+  flex-direction: column; /* 👈 Esto apila input y botón uno debajo del otro */
+  align-items: flex-start; /* o center si quieres centrado */
+  gap: 15px; /* espacio entre input y botón */
+}
+.newsletter-content input {
+  width: 220px; /* 👈 Más pequeño y rectangular */
+  padding: 8px 12px; /* 👈 Menos alto, más compacto */
+  border: 1px solid #faf7f7;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+}
+
+
+.newsletter-content input:focus {
+  outline: none;
+  border-color: #00d084;
+}
+
+.newsletter-content button {
+  padding: 12px 30px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletter-content button:hover {
+  background: #000;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  
+  transform: translateX(-150px);
+ 
+}
+
+.contact-icons p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #0f0f0f;
+  margin: 0;
+  transform: translateY(-100px);
+}
+
+/* 4 Columnas ABAJO con títulos verdes */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: start;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  margin-left: 30px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #00d084;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-green {
+  color: #00d084;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00d084;
+}
+
+@media (max-width: 768px) {
+  .newsletter-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-icons {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
